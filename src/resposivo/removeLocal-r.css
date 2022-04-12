@@ -1,0 +1,63 @@
+@media (max-width:450px) {
+    .formulario{
+        width: 95%;
+    }
+    .formulario form fieldset:first-child input{
+        margin: 5% 2%;
+        width: 90%;
+    }
+    .formulario form fieldset:first-child  .line-address{
+        width: 90%;
+        flex-flow: row wrap;
+    }
+    .formulario form fieldset:first-child .line-address input[name="address"]{
+        width: 70%;
+    }
+    .formulario form fieldset:first-child .line-address input[name='number']{
+        width: 20%;
+    }
+    .formulario form fieldset:first-child .line-address select{
+        background: transparent;
+        color: var(--text);
+        width: 60%;
+        padding: 2% 0;
+        margin: 6% auto 2%;
+    }
+    /* SECOND FIELDSET*/
+    .formulario form fieldset .table{
+        width: 100%;
+    }
+    .formulario form fieldset .table table{
+        width: 90%;
+    }
+    .formulario form fieldset .total {
+        width: 80%;
+        margin: 2%;
+    }
+    .formulario form fieldset .payments{
+        margin: 1% 0;
+    }
+    .formulario form fieldset .options-payments{
+        display: flex;
+        flex-flow: column nowrap;
+        color: var(--text);
+        transform: translateY(-100%);
+        visibility: hidden;
+    }
+    .formulario form fieldset .options-payments.show-payments{
+        transform: translateY(0%);
+        visibility: visible;
+        transition: .4s;
+    }
+    .formulario form fieldset textarea{
+        width: 90%;
+        margin: 2% 0;
+    }
+    .formulario form fieldset input[type='button']{
+        margin: 2% 0;
+        width: 70%;
+        padding: 4% 0;
+    }
+
+
+}

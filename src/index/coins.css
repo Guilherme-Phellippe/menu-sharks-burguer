@@ -1,0 +1,94 @@
+:root{
+    --background: rgb(27, 27, 27);
+    --text: rgb(240, 240, 240);
+    --darkYellow: #CFAA51;
+    --lightYellow: #F7E58F;
+    --darkBlue: #001F48;
+    --lightBlue: #606c83;
+}
+.content-coins{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .2s;
+}
+.content-coins.showCoin{
+    visibility: visible;
+    opacity: 1;
+}
+.content-coins .box-coins{
+    width: 30%;
+    height: auto;
+    background: linear-gradient(to left, var(--darkYellow), var(--lightYellow));
+    position: fixed;
+    right: 13%;
+    top: 100px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content-coins .box-coins h3{
+    width: 70%;
+    text-align: center;
+    color: var(--background);
+    margin: 5% 0;
+}
+.content-coins .box-coins input{
+    color: var(--background);
+    margin: 5% 0;
+    padding: 5% 0;
+    width: 80%;
+    text-align: center;
+    font-size: max(2vw, 1.5rem);
+    border: var(--darkYellow);
+    outline: none;
+}
+.content-coins .box-coins button{
+    margin: 5% 0;
+    width: 80%;
+    height: 13%;
+    min-height: 40px;
+    background: linear-gradient(to right, var(--darkBlue), var(--lightBlue));
+    color: var(--text);
+    font-size: max(2vw, 1rem);
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+.content-coins .box-coins #obs{
+    margin: 5% 0;
+    width: 80%;
+    height: 13%;
+    color: red;
+    font-size: max(1vw, .6rem);
+    border-radius: 10px;
+    border: none;
+
+}
+.content-coins .box-coins .triangulo{
+    position: absolute;
+    top: -3%;
+    left: 47%;
+    background-color: var(--darkYellow);
+    width: 6%;
+    height: 3%;
+    clip-path: polygon(0% 100%, 50% 0%, 100% 100%)
+}
+.content-coins .box-coins #closeBoxOrder{
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    padding: 5px;
+    color: rgb(138, 2, 2);
+    background-color: white;
+    border: 2px solid var(--darkYellow);
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+}
+

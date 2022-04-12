@@ -1,0 +1,947 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&display=swap');
+
+*{
+    padding: 0;margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+:root{
+    --background: rgb(27, 27, 27);
+    --text: rgb(240, 240, 240);
+    --darkYellow: #CFAA51;
+    --lightYellow: #F7E58F;
+    --darkBlue: #001F48;
+    --lightBlue: #606c83;
+}
+body{
+    background-color: var(--background);
+}
+html{
+    scroll-behavior: smooth; 
+    overflow-x: hidden;
+}
+
+header {
+    width: 100vw;
+    height: 100vh;
+}
+header .header{
+    width: 100%;
+    height: 10%;
+    min-height: 80px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    display: flex;
+    position: fixed;
+    z-index: 999;
+}
+
+header .header .logo{
+    width: 25%;
+    height: 100%;
+    min-width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .header .logo img{
+    height: 90%;
+    cursor: pointer;
+}
+
+header .header nav{
+    width: 45%;
+    height: 100%;
+}
+header .header nav ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+header .header nav ul li{
+    list-style: none;
+    position: relative;
+    width: auto;
+    height: 35%;
+}
+header .header nav ul li a{
+    text-decoration: none;
+    color: var(--text);
+    cursor: pointer;
+    transition: color .3s linear;
+}
+header .header nav ul li div{
+    position: absolute;
+    bottom: 0;
+    width: 0%;
+    border-radius: 50px;
+    height: 8%;
+    background: linear-gradient(to left , var(--lightYellow)5%, var(--darkYellow) ,var(--lightYellow)95%);
+    transition: width .3s linear;
+}
+header .header nav ul li:hover div{
+    width: 100%;
+}
+header .header nav ul li a:hover{
+    color: var(--darkYellow);
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.308);
+}
+
+header .header .icons-nav{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header .header .icons-nav > i{
+    color: var(--darkYellow);
+    cursor: pointer;
+    font-size: max(1.9vw, 1.3rem);
+    position: relative;
+    transition: color .3s ease;
+}
+header .header .icons-nav > i:hover{
+    color: var(--text);
+}
+header .header .icons-nav > i span{
+    background-color: var(--text);
+    font-size: max(.7vw , .7rem);
+    padding: 4px 5px 2px 4px;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    right: -8px;
+    transition: background .3s linear;
+}
+header .header .icons-nav .fa-shopping-cart{
+    transform: scale(1);
+    transition: transform .5s;
+}
+header .header .icons-nav .fa-shopping-cart.scale{
+    transform: scale(1.8);
+}
+header .header .icons-nav > i:hover span{
+    background-color:var(--darkYellow);
+}
+
+header .header .icons-nav button{
+    width: 25%;
+    min-width: 160px;
+    height: 40%;
+    min-height: 40px;
+    padding: .8%;
+    font-size: max(1vw , .6rem);
+    font-weight: 700;
+    letter-spacing: .8px;
+    border: none;
+    background: var(--darkYellow);
+    color: var(--text);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s ease-in;
+}
+
+header .header .icons-nav #menu-mobile{
+    font-size: max(2.5vw, 1rem);
+    visibility: hidden;
+}
+header .header .icons-nav button:hover{
+    background: var(--text);
+    color: var(--darkYellow);
+}
+
+header .header .icons-nav button > i{
+    margin-left: 4%;
+}
+header .describe{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header .describe h2{
+    color: var(--text);
+    font-size: max(3vw, 1.5rem);
+    margin-bottom: 5%;
+}
+header .describe .title{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+header .describe .title > p{
+    color: var(--text);
+    font-size: max(2vw, 1rem);
+    width: 80%;
+    text-align: center;
+}
+header .describe p span{
+    color: var(--darkYellow);
+}
+header .describe .info-describe{
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+    width: 100%;
+}
+header .describe .info-describe div{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1%;
+    width: 100%;
+}
+
+header .describe .info-describe div i{
+    color: var(--darkYellow);
+    font-size: max(2.5vw , 1.5rem);
+    margin-bottom: 3%;
+}
+header .describe .info-describe div p{
+    color: var(--text);
+    margin-bottom: 2%;
+    text-align: center;
+}
+header .describe .info-describe div span{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+header .describe .friends-facebook{
+    display: flex;
+    margin-top: 6%;
+}
+header .describe .friends-facebook .icon-facebook{
+    width: 30%;
+    height: auto;
+    display: grid;
+    place-items: center;
+    margin: 0 3%;
+}
+header .describe .friends-facebook .icon-facebook i{
+    font-size: max(4.3vw , 2rem);
+    border: 2px solid black;
+    color: var(--darkBlue);
+    border-radius: 50%;
+    text-shadow: 1px 1px 10px white;
+}
+header .describe .friends-facebook .friends h3{
+    color: var(--text);
+    margin-bottom: 2%; 
+    font-size: max(1.8vw , .7rem);
+}
+header .describe .friends-facebook .friends img{
+    border-radius: 50%;
+    border: 2px solid white;
+}
+header .describe .friends-facebook .friends img:nth-of-type(2){
+   position: relative;
+   left: -5%;
+}
+header .describe .friends-facebook .friends img:nth-of-type(3){
+   position: relative;
+   left: -10%;
+}
+header .describe .friends-facebook .friends span{
+    color: var(--text);
+    position: relative;
+    left: -10%;
+}
+header .image {
+    position: absolute;
+    bottom: 0;
+    right: 0; 
+    width: 70%;
+    min-width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+header .image img{
+    width: 90%;
+    min-width: 500px;
+    opacity: .8;
+    margin-bottom: 10%;
+}
+/* FIM HEADER */
+  /* -- */
+/* CARDAPIO */
+.cardapio{
+    width: 100vw;
+    height: 120vh;    
+    position: relative;
+}
+.cardapio .title-cardapio{
+    height: 12%;
+    min-height: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.cardapio .title-cardapio > h2{
+    color: var(--text);
+    width: 90%;
+    text-decoration: overline;
+    font-size: max(2.5vw , 1.3rem);
+}
+.cardapio .title-cardapio > h3{
+    color: rgba(255, 255, 255, 0.349);
+    width: 90%;
+    font-size: max(1vw , .8rem);
+}
+
+.cardapio > main{
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.cardapio > main .content-tips{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: grid;
+    place-items: center;
+    visibility: visible;
+}
+.cardapio > main .content-tips.show{
+    visibility: hidden;
+}
+.cardapio > main .tips{
+    width: 50%;
+    min-width: 350px;
+    height: 35%;
+    min-height: 250px;
+    background-color: white;
+    border: 1px solid var(--darkYellow);
+    border-radius: 15px;
+    box-shadow: 1px 1px 7px rgb(129, 129, 129);
+    transform: scale(.1);
+    display: flex;
+    transition: transform .4s ease-out;
+}
+.cardapio > main .tips #info{
+    width: 70%;
+    height: 100%;
+}
+.cardapio > main .tips #info h3{
+    text-align: center;
+    width: 100%;
+    margin: 2%;
+    font-size: max(2vw, 1rem);
+    color: var(--darkYellow);
+}
+.cardapio > main .tips #info p:first-of-type{
+    text-align: center;
+    width: 50%;
+    margin: 0% auto;
+    font-size: max(1vw, .5rem);
+    color: var(--background);
+}
+.cardapio > main .tips #info h4{
+    width: 100%;
+    margin-left: 10%;
+    font-size: max(2.2vw, 1.2rem);
+    color: var(--darkYellow);
+}
+.cardapio > main .tips #info p:last-of-type{
+    width: 100%;
+    margin: 4% 0 0 4%;
+    font-size: max(1.2vw, .8rem);
+    color: var(--background);
+}
+.cardapio > main .tips #info button{
+    display: block;
+    width: 50%;
+    height: 15%;
+    margin: 8% auto;
+    border-radius: 10px;
+    outline: none;
+    border:  1px solid var(--darkYellow);
+    color: var(--darkYellow);
+    cursor: pointer;
+    font-size: max(1.7vw, .8rem);
+}
+
+.cardapio > main .tips #info-img{
+    width: 30%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+.cardapio > main .tips #info-img img{
+    width: 80%;
+    object-fit: contain;
+}
+
+
+
+.cardapio > main .tabs{
+    width: 90%;
+    height: 95%;
+}
+.cardapio > main .tabs .tab-links{
+    height: 20%;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.cardapio > main .tabs .tab-links button{
+    text-transform: uppercase;
+    cursor: pointer;
+
+    color: var(--text);
+    background-color: transparent;
+    border: none;
+
+    padding: .5% 1%;
+    margin: 1% .5%;
+
+    position: relative;
+    transition: color .4s;
+}
+
+.cardapio > main .tabs .tab-links button::after{
+    content: '';
+    width: 0%;
+    height: 4px;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to left , var(--lightYellow)5%, var(--darkYellow) ,var(--lightYellow)95%);
+
+    transition: .4s;
+}
+
+.cardapio > main .tabs .tab-links button:hover::after,
+.cardapio > main .tabs .tab-links button.active::after{
+    width: 100%;
+}
+.cardapio > main .tabs .tab-links button:hover{
+    color: var(--darkYellow);
+}
+.cardapio > main .tabs .tab-content{
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+}
+.cardapio > main .tabs .tab-content > section{
+    height: 100%;
+    width: 100%;
+    animation: up 1.2s;
+    color: white;
+}
+
+@keyframes up {
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }to{
+        opacity: 1;
+    }
+    
+}
+/* TABELA DE PREÇOS */
+section table{
+    width: 100%;
+}
+section table tr{
+    height: 50px;
+}
+section table th{
+    height: 50px;
+}
+section > p{
+    margin: 5% 30%;
+    color: rgba(150, 83, 83, 0.8);
+}
+section table td{
+    font-size: max(1.4vw, .7rem);
+    height: 100px;
+}
+section table td:not(td:first-child){
+    min-width: 100px;
+    text-align: center;
+}
+section table td h3{
+    font-size: max(1.5vw, .8rem);
+}
+section table td p{
+    color: rgba(255, 255, 255, 0.7);
+    font-size: max(1.2vw, .7rem);
+    width: 60%;
+}
+section table td > button{
+    background-color: transparent;
+    color: var(--darkYellow);
+    border: none;
+    outline: none;
+    font-size: max(2.5vw , 1rem);
+    cursor: pointer;
+    position: relative;
+}
+section table td > button span{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: max(1.2vw ,.9rem);
+    background-color: white;
+    padding: 3px 4px 2px 5px;
+    border-radius: 50%;
+}
+/* EXTRAS BATATAS E YAKISOBA*/
+section .add-batata{
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 20%;
+    width: 60%;
+    height: 60%;
+    background:linear-gradient(to left, var(--text) , #c2c2c2);
+    border: 2px solid var(--background);
+    color: var(--background);
+    box-shadow: 2px 2px 10px #f1f1f160;
+    border-radius: 10px;
+    padding: 2%;
+    overflow: auto;
+}
+section .add-batata span{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    padding: 8px;
+    background: var(--background);
+    color: var(--text);
+    border-radius: 10px;
+    margin: 2px;
+    cursor: pointer;
+}
+section .add-yakisoba{
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 20%;
+    width: 60%;
+    height: 60%;
+    background:linear-gradient(to left, var(--text) , #c2c2c2);
+    border: 2px solid var(--back);
+    color: var(--background);
+    box-shadow: 2px 2px 10px #f1f1f160;
+    border-radius: 10px;
+    padding: 2%;
+    overflow: auto;
+}
+section .add-yakisoba span{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    padding: 8px;
+    background: var(--background);
+    color: var(--text);
+    border-radius: 10px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.cardapio .btn-box{
+    width: 70%;
+    padding: 5% 0;
+    border: none;
+    background-color: var(--darkYellow);
+    color: var(--text);
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: max(90% , .7rem);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background .5s , color .5s;
+}
+.cardapio .btn-box:hover{
+    background-color: var(--text);
+    color: var(--darkYellow);
+    border: 2px solid var(--darkYellow);
+    padding: calc(5% - 2px) 0;
+}
+.cardapio .content-change{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.04);
+    display: none;
+    place-items: center;
+}
+.cardapio .change{
+    width: 30%;
+    height: 20%;
+    background: linear-gradient(to left, var(--text) , #ddd);
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px black;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.cardapio .change h2{
+    color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    font-size: max(1.5vw , .7rem);
+    margin: 4%;
+}
+.cardapio .change button{
+    width: 60%;
+    height: 20%;
+    margin: 2%;
+    border: 1px solid green;
+    color: green;
+    cursor: pointer;
+}
+
+.cardapio .content-order{
+    width: 50%;
+    height: 100%;
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    transform: translate(-50%, 0%) scale(1);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 1s;
+}
+.cardapio .show{
+    transform: translate(5%, -50%) scale(.1);
+    opacity: 1;
+    visibility: visible;
+}
+.cardapio .show2{
+    transform: translate(0%, 0%) scale(1);
+    opacity: 1;
+    visibility: visible;
+}
+.cardapio .box-order{
+    border: 2px solid var(--darkYellow);
+    background-color: var(--text);
+    width: 70%;
+    min-width: 200px;
+    height: 50%;
+    min-height: 200px;
+    max-height: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px black;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    background: linear-gradient(to left ,white, rgba(255, 255, 255, 0.8),white);
+    transition: .5s;
+    position: relative;
+}
+.cardapio .box-order .triangulo{
+    position: absolute;
+    top: -3%;
+    left: 47%;
+    background-color: var(--darkYellow);
+    width: 6%;
+    height: 3%;
+    clip-path: polygon(0% 100%, 50% 0%, 100% 100%)
+}
+.cardapio .box-order #closeBoxOrder{
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    padding: 5px;
+    color: rgb(138, 2, 2);
+    background-color: white;
+    border: 2px solid var(--darkYellow);
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+}
+.cardapio .box-order .table-order{
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    width: 95%;
+    height: 48%;
+    margin-left: 2.5%;
+    margin-top: 2%;
+    overflow-y: auto;
+    text-align: center;
+}
+.cardapio .box-order .table-order > p{
+    display: none;
+    color: red;
+    width: 100%;
+    text-align: center;
+}
+
+.cardapio .box-order .table-order thead{
+    width: 100%;
+    background-color: var(--darkYellow);
+}
+.cardapio .box-order .table-order thead th{
+    width: 25px;
+}
+.cardapio .box-order .table-order thead th:nth-child(2){
+    width: 100px;
+}
+.cardapio .box-order .table-order tbody{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.04);
+}
+.cardapio .box-order .table-order tbody td{
+    width: 25px;
+}
+.cardapio .box-order .table-order tbody input{
+    width: 100%;
+    height: 100%;
+    padding: 10% 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+.cardapio .box-order .table-order tbody td i{
+    color: rgb(138, 2, 2);
+    cursor: pointer;
+    font-size: max(1.5vw ,1rem);
+}
+
+.cardapio .box-order .woman{
+    width: 40%;
+    height: 50%;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cardapio .box-order .woman img{
+    width: 90%;
+    min-width: 70px;
+}
+
+.cardapio .box-order .talking{
+    width: 60%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 4% 0;
+}
+.cardapio .box-order .talking select{
+    width: 80%;
+    outline: none;
+    background-color: var(--darkYellow);
+    color: var(--text);
+    border: 1px solid black;
+    text-align: center;
+    font-size: max(1.5vw, 1rem);
+    cursor: pointer;
+}
+.cardapio .box-order .talking > span{
+    font-size: max(1vw, .5rem);
+    color: rgba(255, 0, 0, 0.7);
+}
+.cardapio .box-order .talking p{
+    font-size: max(1.5vw, .8rem);
+    font-weight: 500;
+}
+
+
+
+/* COMBOS */
+
+.combos{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.combos h2{
+    text-align: center;
+    width: 100%;
+    color: var(--text);
+    text-decoration: overline;
+    font-size: max(3vw, 1.5rem);
+}
+
+.combos .content{
+    width: 80%;
+    height: 80%;
+    display: flex ;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4%;
+}
+
+.combos .content div{
+    width: 28%;
+    height: 40%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgb(100, 100, 100, .3);
+    color: var(--text);
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: .3s;
+}
+
+.combos .content div > h3{
+    font-size: max(2.2vw, 1.5rem);
+    color: var(--darkYellow);
+}
+.combos .content div > button{
+    width: 40%;
+    height: 14%;
+    min-height: 30px;
+
+    background-color: transparent;
+    border: 1px solid var(--darkYellow);
+    color: var(--darkYellow);
+
+    font-size: max(2vw, 1rem);
+    margin: 2%;
+    cursor: pointer;
+
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.6);
+
+    transition: border .3s , color .3s;
+}
+.combos .content div > button:hover{
+    box-shadow: 1px 2px 10px var(--darkYellow);
+}
+
+/* CONTATO */
+
+.contato {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-flow: row wrap;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.486);
+    border: 1px solid rgb(100, 100, 100, .3);
+    padding: 6%;
+}
+.contato .info-contact{
+    width: 50%;
+    height: 70%;
+}
+.contato .info-contact h3{
+    text-align: center;
+    font-size: max(2vw , 1rem);
+    color: var(--text);
+}
+.contato .info-contact h3 i{
+    color: green;
+}
+.contato .info-contact p{
+    text-align: center;
+    font-size: max(1.5vw , .9rem);
+    color: var(--text);
+    opacity: .8;
+}
+.contato .info-contact h4{
+    text-align: center;
+    font-size: max(1.7vw , 1rem);
+    color: green;
+}
+.contato .info-contact h4 i{
+    color: green;
+}
+.contato .info-contact p:last-of-type{
+    margin-bottom: 6%;
+}
+/*logo contact*/
+.contato .logo-contact{
+    width: 50%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contato .logo-contact h3{
+    color: var(--text);
+    font-size: max(1.3vw , .8rem);
+    width: 80%;
+    text-align: center;
+    opacity: .8;
+}
+.contato .logo-contact img{
+    width: 30%;
+}
+
+/*developer*/
+
+.contato .info-developer{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    opacity: .7;
+}
+
+.contato .info-developer h3{
+    color: var(--text);
+    text-align: center;
+    font-size: max(1.5vw, 1rem);
+}
+.contato .info-developer h3 span{
+    color:var(--darkYellow);
+    font-size: max(1.2vw, .8rem);
+}
+.contato .info-developer p{
+    color: var(--text);
+    margin: 2% 0;
+}
+.contato .info-developer .rede-sociais {
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: max(2vw, 1rem);
+}
+.contato .info-developer .rede-sociais i{
+    color: green;
+    cursor: pointer;
+}
+.contato .info-developer .rede-sociais i:last-of-type{
+    color: #EE2D79;
+}
+.contato .info-developer .rede-sociais i:first-of-type{
+    color: rgb(56, 56, 209);
+}

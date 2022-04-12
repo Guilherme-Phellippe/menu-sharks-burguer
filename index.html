@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shark's Burguer</title>
+    <link rel="shortcut icon" href="./img/faivon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./src/index/index.css">
+    <link rel="stylesheet" href="./src/resposivo/index-r.css">
+    <link rel="stylesheet" href="./src/index/coins.css">
+    <link rel="stylesheet" href="./src/resposivo/coins-R.css">
+    <script src="./src/index/index.js" defer></script>
+    <script src="./src/resposivo/index.r.js" defer></script>
+    <script src="./src/index/coins.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <!-- logo -->
+            <div class="logo">
+                <img src="./img/logo.png" alt="logo">
+            </div>
+            <!-- menu navegação -->
+            <nav>
+                <ul>
+                    <li>
+                        <div></div>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <div></div>
+                        <a href="#cardapio">Cardápio</a>
+                    </li>
+                    <li>
+                        <div></div>
+                        <a href="#combos">Combos</a>
+                    </li>
+                    <li>
+                        <div></div>
+                        <a href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="icons-nav">
+                <i class="fas fa-donate"><span>0</span></i>
+                <i class="fas fa-shopping-cart"><span>0</span></i>
+                <button>Faça seu pedido<i class="fas fa-hamburger"></i></button>
+                <i class="fas fa-bars" id="menu-mobile"></i>
+            </div>
+        </div>
+        <div class="describe">
+            <div class="title">
+                <h2>Shark's burguer</h2>
+                <p>Sharks Burguer há mais de 20 anos servindo com <span>quantidade e confiança.<br></span>
+                    Nosso compromisso é a sua satisfação.</p>
+            </div>
+            <div class="info">
+                <div class="info-describe">
+                    <div class="cell-phone">
+                        <i class="fas fa-phone-square-alt"></i>
+                        <p>35 8884-8379</p>
+                        <span>Telefone</span>
+                    </div>
+                    <div class="facebook">
+                        <i class="fab fa-facebook-square"></i>
+                        <p>Curta nossa pagina</p>
+                        <span>Facebook</span>
+                    </div>
+                    <div class="delivery">
+                        <i class="fas fa-motorcycle"></i>
+                        <p>Delivery</p>
+                        <span>18:00 ás 00:30</span>
+                    </div>
+                </div>
+                <div class="friends-facebook">
+                    <div class="icon-facebook">
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                    <div class="friends">
+                        <h3>Nossos amigos no facebook</h3>
+                        <img src="./img/ft3.webp" alt="" width="10%">
+                        <img src="./img/ft1.webp" alt="" width="10%">
+                        <img src="./img/ft2.webp" alt="" width="10%">
+                        <span>+3459 amigos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="image">
+            <img src="./img/background.webp" alt="">
+        </div>
+    </header>
+
+    <!-- CARDÁPIO -->
+
+    <section class="cardapio" id="cardapio">
+        <!-- BOX CONTENDO OS TITULOS -->
+        <div class="title-cardapio">
+            <h2>Nosso Cardápio</h2>
+            <h3>São 43 tipos de lanche há sua escolha...</h3>
+        </div>
+
+        <!-- CONTEUDO PRINCIPAL COM TABS -->
+        <main>
+            <div class="content-tips">
+                <div class="tips">
+                    <div id="info">
+                        <h3>Boa noite!</h3>
+                        <p>Automatizamos nossa forma de realizar seu pedido, deixando mais rápido e prático!</h4>
+                        <h4>Dica:</h4>
+                        <p>Para realizar seu pedido basta clicar sobre o item e ele será redirecionado para seu carrinho, depois basta finalizar a compra e bom apetite <i class="far fa-smile-beam"></i></p>
+                        <button id="confirm">Entendido</button>
+                    </div>
+                    <div id="info-img">
+                        <img src="./img/faivon.webp" alt="" >
+                    </div>
+                </div>
+            </div>
+            <div class="tabs">
+                <div class="tab-links">
+                    <button data-id="hamburguer" data-open>Hambuguer</button>
+                    <button data-id="frango">Frango</button>
+                    <button data-id="hotdog">Hot Dog</button>
+                    <button data-id="especial">Especial</button>
+                    <button data-id="artesanal">Artesanal</button>
+                    <button data-id="kids">Kids</button>
+                    <button data-id="barca">Barcas e macarrão</button>
+                    <button data-id="bebidas">bebidas</button>
+                </div>
+
+                <div class="tab-content">
+                    <section id="hamburguer">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>X-Egg</h3>
+                                    <p>Pão, hambúrguer 120g, ovo, queijo e batata-palha.</p>
+                                </td>
+                                <td>P: 22,00</td>
+                                <td>G: 35,00</td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>X-Bacon</h3>
+                                    <p>Pão, hambúrguer, queijo e bacon.</p>
+                                </td>
+                                <td>P: 25,00</td>
+                                <td>G: 37,00</td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>X-Burguer</h3>
+                                    <p>Pão, hambúrguer (2 no pequeno e 3 no grande), queijo e presunto.</p>
+                                </td>
+                                <td>P: 24,00</td>
+                                <td>G: 35,00</td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>X-Salada</h3>
+                                    <p>Pão, hambúrguer, queijo, milho, alface e tomate.</p>
+                                </td>
+                                <td>P: 26,00</td>
+                                <td>G: 35,00</td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>X-Egg salada</h3>
+                                    <p>Pão, hambúrguer (2 no pequeno e 3 no grande), queijo, ovo, milho, alface e
+                                        tomate.</p>
+                                </td>
+                                <td>P: 26,00</td>
+                                <td>G: 38,00</td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>X-Bacon salada</h3>
+                                    <p>Pão, hambúrguer, queijo, bacon, milho, alface e tomate.</p>
+                                </td>
+                                <td>P: 26,00</td>
+                                <td>G: 38,00</td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>X-Tudo</h3>
+                                    <p>Pão, hambúrguer, presunto, queijo, ovo, bacon, alface, milho e tomate.</p>
+                                </td>
+                                <td>P: 27,50</td>
+                                <td>G: 40,00</td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Super shark's burguer</h3>
+                                    <p>Pão, 2 hambúrguer, presunto, queijo, ovo, catupiry, batata-palha, bacon, alface,
+                                        milho e tomate.</p>
+                                </td>
+                                <td>P: 29,00</td>
+                                <td>G: 45,00</td>
+                                <td><button>+</button></td>
+                            </tr>
+                        </table>
+                        <p>OBS: Todos os lanches grandes são com 2 hamburgueres e acompanha um copo de batata frita</p>
+                    </section>
+
+                    <section id="frango">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>X-Frango salada</h3>
+                                    <p>Pão, filé de Frango, abacaxi, queijo , alface e tomate</p>
+                                </td>
+                                <td>P: 25,00</td>
+                                <td>G: 37,00</td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>X-Frango bacon</h3>
+                                    <p>Pão, filé de frango, queijo, bacon, alface e tomate.</p>
+                                </td>
+                                <td>P: 28,00</td>
+                                <td>G: 42,00</td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>X-Frango catupiry</h3>
+                                    <p>Pão, filé de frango, queijo, catupiry, alface e tomate</p>
+                                </td>
+                                <td>P: 29,00</td>
+                                <td>G: 42,00</td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>X-Frango cheddar</h3>
+                                    <p>Pão, filé de frango, queijo, cheddar, alface e tomate</p>
+                                </td>
+                                <td>P: 29,00</td>
+                                <td>G: 42,00</td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>X-Tudo frango</h3>
+                                    <p>Pão, filé de frango, presunto, queijo, ovo, bacon, milho, alface e tomate.</p>
+                                </td>
+                                <td>P: 31,00</td>
+                                <td>G: 45,00</td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Super Shark's frango</h3>
+                                    <p>Pão, filé de frango, presunto, queijo, ovo, bacon, batata-palha, catupiry, milho,
+                                        alface e tomate.</p>
+                                </td>
+                                <td>P: 32,00</td>
+                                <td>G: 52,00</td>
+                                <td><button>+</button></td>
+                            </tr>
+                        </table>
+                        <p>OBS: Todos os lanches grandes são com 2 hamburgueres e acompanha um copo de batata frita</p>
+                    </section>
+
+                    <section id="hotdog">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>Hot Dog simples</h3>
+                                    <p>Pão, 2 salsichas, milho e vinagrete</p>
+                                </td>
+                                <td>R$ 15,00</td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Hot Dog especial</h3>
+                                    <p>Pão, 2 salsichas, bacon, milho, batat-palha, pure de batata e vinagrete</p>
+                                </td>
+                                <td>R$ 25,00</td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Super Hot Dog</h3>
+                                    <p>Pão, 3 salsichas, queijo, bacon, milho e batata-palha</p>
+                                </td>
+                                <td>P: 21,50</td>
+                                <td>G: 30,00</td>
+                                <td><button>+</button></td>
+                            </tr>
+                        </table>
+                    </section>
+
+                    <section id="especial">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>Misto quente simples</h3>
+                                    <p>Pão, presunto e queijo</p>
+                                </td>
+                                <td>P: 18,00</td>
+                                <td>G: 30,00</td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Misto quente especial</h3>
+                                    <p>Pão, presunto, quieio, milho, bacon e batata-palha</p>
+                                </td>
+                                <td>P: 20,00</td>
+                                <td>G: 32,00</td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Bauru</h3>
+                                    <p>Pão, presunto, queijo, ovo, alface e tomate</p>
+                                </td>
+                                <td>P: 20,00</td>
+                                <td>G: 32,00</td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>X-Calabresa</h3>
+                                    <p>Pão, calabresa, queijo, cebola, alface e tomate</p>
+                                </td>
+                                <td>P: 26,00</td>
+                                <td>G: 38,00</td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>X-Calabresa Completo</h3>
+                                    <p>Pão, calabresa, presunto, queijo, ovo, bacon, alface, tomate</p>
+                                </td>
+                                <td>P: 27,00</td>
+                                <td>G: 41,00</td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Mega Shark's</h3>
+                                    <p>Pão, filé de frango, hambúrguer, ovo, bacon , salsicha, presunto, queijo,
+                                        batata-palha, milho, catupiry, alface, ovo, queijo, tomate e milho</p>
+                                </td>
+                                <td>P: 37,00</td>
+                                <td>G: 70,00</td>
+                                <td><button>+</button></td>
+                            </tr>
+                        </table>
+                    </section>
+
+                    <section id="artesanal">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>Orca</h3>
+                                    <p>Pão, hambúrguer 150g, bacon, cheddar e cebola roxa.</p>
+                                </td>
+                                <td>R$ 23,99</td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Tubarão branco</h3>
+                                    <p>Pão, hambúrguer 150g, mussarela, picles, aneis de cebola.</p>
+                                </td>
+                                <td>R$ 23,99</td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Cachalote</h3>
+                                    <p>Pão, hambúrguer 150g, cheddar, cebola e shoyo</p>
+                                </td>
+                                <td>R$ 23,99</td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Jubarte</h3>
+                                    <p>Pão, hambúrguer 150g, alface americano, tomate, ovo e queijo prato.</p>
+                                </td>
+                                <td>R$ 23,99</td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Baleia azul</h3>
+                                    <p>Pão, hambúrguer 150g, bacon em fatis, cheddar, ovo e molho barbecue.</p>
+                                </td>
+                                <td>R$ 23,99</td>
+                                <td><button>+</button></td>
+                            </tr>
+                        </table>
+
+                    </section>
+
+                    <section id="kids">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>Burguer Kids</h3>
+                                    <p>Pão, hambúrguer, queijo e presunto.</p>
+                                </td>
+                                <td>R$17,00</td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>X-Salada kids</h3>
+                                    <p>Pão, hambúrguer, queijo , alface e tomate.</p>
+                                </td>
+                                <td>R$17,50</td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>X-Tudo kids</h3>
+                                    <p>Pão, hambúrguer, queijo, presunto, ovo, milho, alface e tomate.</p>
+                                </td>
+                                <td>R$18,00</td>
+                                <td><button>+</button></td>
+                            </tr>
+                        </table>
+                    </section>
+
+                    <section id="barca">
+                        <table>
+                            <tr>
+                                <th> Barcas </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Barca 1</h3>
+                                    <p>Batata 700g, calabresa, bacon, aneis de cebola, cheddar e queijo ralado</p>
+                                </td>
+                                <td>48,00</td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Barca 2</h3>
+                                    <p>2 tudo kids, batata 700g,bacon, aneis de cebola, cheddar, queijo ralado,
+                                        calabresa (um refrigente de 2 litros)</p>
+                                </td>
+                                <td>69,90</td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <th> Yakisoba</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Prato padrão</h3>
+                                    <p>Macarrão, molho shoyo, Mussarela ralada</p>
+                                </td>
+                                <td>P: 8,00</td>
+                                <td>G: 8,00</td>
+                                <td><button>+</button></td>
+                                <td>
+                                    <a id="addYakisoba">+ Adicionais</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th> Batata</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Batata Frita</h3>
+                                    <p>Batata Frita, queijo ralado</p>
+                                </td>
+                                <td>P: 12,00</td>
+                                <td>G: 25,00</td>
+                                <td><button>+</button></td>
+                                <td>
+                                    <a id="addBatata">+ Adicionais</a>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="add-yakisoba">
+                            <span>X</span>
+                            <table>
+                                <tr>
+                                    <th>
+                                        Deseja adicionais?
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td><h3>Filé de franco</h3></td>
+                                    <td>R$6,00</td>
+                                    <td><button>+</button></td>
+                                </tr>
+                                <tr>
+                                    <td><h3>Calabresa</h3></td>
+                                    <td>R$6,00</td>
+                                    <td><button>+</button></td>
+                                </tr>
+                                <tr>
+                                    <td><h3>Bacon</h3></td>
+                                    <td>R$6,00</td>
+                                    <td><button>+</button></td>
+                                </tr>
+                                <tr>
+                                    <td><h3>Presunto</h3></td>
+                                    <td>R$6,00</td>
+                                    <td><button>+</button></td>
+                                </tr>
+                                <tr>
+                                    <td><h3>Salsicha</h3></td>
+                                    <td>R$6,00</td>
+                                    <td><button>+</button></td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Opções de legumes
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td><h3>Tomate</h3></td>
+                                    <td>R$2,50</td>
+                                    <td><button>+</button></td>
+                                </tr>
+                                <tr>
+                                    <td><h3>Pimentão</h3></td>
+                                    <td>R$2,50</td>
+                                    <td><button>+</button></td>
+                                </tr>
+                                <tr>
+                                    <td><h3>Milho</h3></td>
+                                    <td>R$2,50</td>
+                                    <td><button>+</button></td>
+                                </tr>
+                                <tr>
+                                    <td><h3>Ervilha</h3></td>
+                                    <td>R$2,50</td>
+                                    <td><button>+</button></td>
+                                </tr>
+                                <tr>
+                                    <td><h3>Abobrinha</h3></td>
+                                    <td>R$2,50</td>
+                                    <td><button>+</button></td>
+                                </tr>
+                                <tr>
+                                    <td><h3>Pimenta do reino</h3></td>
+                                    <td>R$2,50</td>
+                                    <td><button>+</button></td>
+                                </tr>
+                                <tr>
+                                    <td><h3>Cenoura</h3></td>
+                                    <td>R$3,00</td>
+                                    <td><button>+</button></td>
+                                </tr>
+                                <tr>
+                                    <td><h3>Brócolis</h3></td>
+                                    <td>R$3,00</td>
+                                    <td><button>+</button></td>
+                                </tr>
+                                <tr>
+                                    <td><h3>Azeitona</h3></td>
+                                    <td>R$3,00</td>
+                                    <td><button>+</button></td>
+                                </tr>
+                                <tr>
+                                    <td><h3>Champignon</h3></td>
+                                    <td>R$3,00</td>
+                                    <td><button>+</button></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="add-batata">
+                            <span>X</span>
+                            <table>
+                                <tr>
+                                    <th>
+                                        Deseja adicionais?
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td><h3>Franco</h3></td>
+                                    <td>R$7,00</td>
+                                    <td><button>+</button></td>
+                                </tr>
+                                <tr>
+                                    <td><h3>Calabresa</h3></td>
+                                    <td>R$7,00</td>
+                                    <td><button>+</button></td>
+                                </tr>
+                                <tr>
+                                    <td><h3>Bacon</h3></td>
+                                    <td>R$7,00</td>
+                                    <td><button>+</button></td>
+                                </tr>
+                                <tr>
+                                    <td><h3>Catupiry</h3></td>
+                                    <td>R$7,00</td>
+                                    <td><button>+</button></td>
+                                </tr>
+                                <tr>
+                                    <td><h3>Cheddar</h3></td>
+                                    <td>R$7,00</td>
+                                    <td><button>+</button></td>
+                                </tr>
+                                <tr>
+                                    <td><h3>Mussarela Ralada</h3></td>
+                                    <td>R$6,00</td>
+                                    <td><button>+</button></td>
+                                </tr>
+                                <tr>
+                                    <td><h3>Barbecue</h3></td>
+                                    <td>R$3,00</td>
+                                    <td><button>+</button></td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </section>
+
+
+                    <section id="bebidas">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>Caçulinha</h3>
+                                </td>
+                                <td>R$2,50</td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Refrigente lata</h3>
+                                </td>
+                                <td>R$5,00</td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Refrigente 600ml</h3>
+                                </td>
+                                <td>R$8,00</td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Refrigente Gebel 2 litros</h3>
+                                </td>
+                                <td>R$8,00</td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Coca-cola 2litros</h3>
+                                </td>
+                                <td>R$12,00</td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Skol</h3>
+                                </td>
+                                <td>R$5,00</td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Eisenbahn</h3>
+                                </td>
+                                <td>R$6,00</td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Suco bio leve</h3>
+                                </td>
+                                <td>4,00</td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Sucos laranja (natural), morango (natural)</h3>
+                                </td>
+                                <td>6,00</td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Suco maracujá (polpa)</h3>
+                                </td>
+                                <td>6,00</td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h3>Suco abacaxi, manga (polpa)</h3>
+                                </td>
+                                <td>5,00</td>
+                                <td><button>+</button></td>
+                            </tr>
+                        </table>
+                    </section>
+                </div>
+            </div>
+        </main>
+        <div class="content-change">
+            <div class="change">
+                <h2>Escolha o tamanho do seu pedido</h2>
+                <button>Grande <span>R$00,00</span></button>
+                <button>Pequeno <span>R$00,00</span></button>
+            </div>
+        </div>
+        <!-- box de finalização de pedido -->
+        <div class="content-order">
+            <div class="box-order">
+                <div class="triangulo"></div>
+                <span id="closeBoxOrder">X</span>
+                <div class="table-order">
+                    <table>
+                        <thead>
+                            <th>Qntd.</th>
+                            <th>Pedido</th>
+                            <th>Valor</th>
+                            <th>Excluir</th>
+                        </thead>
+                        <tbody id="tbody">
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="woman">
+                    <img src="./img/faivon.webp" alt="">
+                </div>
+                <div class="talking">
+                    <select name="" id="select">
+                        <option value="">Entregar</option>
+                        <option value="">Retirada</option>
+                    </select>
+                    <span>Obs: Quantidade do item pode ser alterado na finalização do seu pedido.</span>
+                    <p>Total: R$<span id="total">00,00</span></p>
+                    <button class="btn-box" id="finish-orders">Finalizar pedido</button>
+                </div>
+            </div>
+        </div>
+        <div class="content-coins">
+            <div class="box-coins">
+                <div class="triangulo"></div>
+                <span id="closeBoxOrder">X</span>
+                <h3>insira seu codigo promocional:</h3>
+                <input type="text">
+                <button>Confirme</button>
+                <span id="obs">obs: Seus pedidos são armazenados no banco de dados do chrome, caso seu navegador seja limpado, a quantidade de pedidos será zerada.</span>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- COMBOS -->
+
+    <section class="combos" id="combos">
+        <h2>
+            Confira nossos combos
+        </h2>
+        <div class="content">
+            <div class="combo1">
+                <h3>Combo 1</h3>
+                <p>1 X-tudo pequeno</p>
+                <p>1 Porção de batata frita (P)</p>
+                <p>1 Coca lata</p>
+                <span>R$ 32,00</span>
+                <button>+</button>
+            </div>
+            <div class="combo2">
+                <h3>Combo 2</h3>
+                <p>1 X-Frango tudo pequeno</p>
+                <p>1 Porção de batata frita (P)</p>
+                <p>1 Coca lata</p>
+                <span>R$ 40,00</span>
+                <button>+</button>
+
+            </div>
+            <div class="combo3">
+                <h3>Combo 3</h3>
+                <p>1 X-Salada pequeno</p>
+                <p>1 Porção de batata frita (P)</p>
+                <p>1 Coca lata</p>
+                <span>R$ 30,00</span>
+                <button>+</button>
+            </div>
+            <div class="combo4">
+                <h3>Combo 4</h3>
+                <p>1 X-tudo grande</p>
+                <p>1 Porção de batata frita (G)</p>
+                <p>1 Coca lata 600ml</p>
+                <span>R$ 58,00</span>
+                <button>+</button>
+            </div>
+            <div class="combo5">
+                <h3>Combo 5</h3>
+                <p>1 X-Frango tudo grande</p>
+                <p>1 Porção de batata frita (G)</p>
+                <p>1 Coca lata 600ml</p>
+                <span>R$ 67,00</span>
+                <button>+</button>
+            </div>
+            <div class="combo6">
+                <h3>Combo 6</h3>
+                <p>2 X-tudo grande</p>
+                <p>1 Porção de batata frita</p>
+                <p>1 Coca-cola 2Litros</p>
+                <span>R$ 110,00</span>
+                <button>+</button>
+            </div>
+        </div>
+
+
+    </section>
+    <!-- CONTATO -->
+
+    <section class="contato" id="contato">
+        <div class="info-contact">
+            <h3>Localização <i class="fas fa-map-marked-alt"></i></h3>
+            <p>Av. Luciano marras, 245</p>
+            <p>Conj. Habitacional</p>
+            <p>37706-215</p>
+            <h4><i class="fab fa-whatsapp"></i> (35) 8884-8379</h4>
+        </div>
+        <div class="logo-contact">
+            <h3>Sharks Burguer há mais de 20 anos servindo com qualidade e confiança a nossos prezados clientes! <br>
+                Obrigado por fazer parte dessa familia!</h3>
+            <img src="./img/faivon.webp" alt="" width="30%">
+        </div>
+        <div class="info-developer">
+            <h3>Site desenolvido por: <br><span>Guilherme Phellipe</span></h3>
+            <p><i class="fas fa-address-book"></i> Contato:</p>
+            <div class="rede-sociais">
+                <i class="fab fa-facebook" name='face'></i>
+                <i class="fab fa-instagram" name='insta'></i>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

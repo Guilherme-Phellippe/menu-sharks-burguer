@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados do pedido</title>
+    <link rel="shortcut icon" href="../../img/faivon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="./removeLocal.css">
+    <link rel="stylesheet" href="../resposivo/delivery-r.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src="./removeLocal.js" defer></script>
+</head>
+
+<body>
+    <div class="formulario">
+        <form action="">
+            <fieldset>
+                <legend>Informe seus dados</legend>
+                <input type="text" name="name" placeholder="Nome" required>
+                <input type="text" name="cell" class="tell" placeholder="Telefone para contato" required>
+                <input type="text" name="cell" class="tell" placeholder="Telefone opcional">
+
+            </fieldset>
+            <fieldset>
+                <legend>confirme seu pedido</legend>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Qntd</th>
+                                <th>Item</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody id="end-order">
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="total">
+                    <P></P>
+                    <p>Total: R$<span></span></p>
+                </div>
+                <div class="payments">
+                    <label for="dinheiro">Dinheiro</label>
+                    <input type="radio" name="pay" value="Dinheiro" required>
+                    <label for="cartao">Cartão</label>
+                    <input type="radio" name="pay" value="Cartão" required>
+                    <label for="pix">Pix</label>
+                    <input type="radio" name="pay" value="Pix" required>
+                </div>
+                <!--  div oculta  -->
+                <div class="options-payments">
+
+                </div>
+                <label for="obs">Obs:</label>
+                <textarea name="obs" id="" cols="30" rows="10"
+                    placeholder="Ex: Tirar maionese, adicionar mais tomate..."></textarea>
+                <input type="button" value="Realizar pedido">
+                <a href="../../index.html#cardapio"><i class="fas fa-undo"></i>Voltar ao cardapio</a>
+            </fieldset>
+        </form>
+    </div>
+
+
+</body>
+
+</html>

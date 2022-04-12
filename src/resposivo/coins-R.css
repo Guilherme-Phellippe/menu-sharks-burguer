@@ -1,0 +1,11 @@
+@media (max-width: 480px) {
+    .content-coins .box-coins{
+        width: 90%;
+        height: auto;
+        min-height: 200px;
+        right: 5%;
+    }
+    .content-coins .box-coins .triangulo{
+        left: 62%;
+    }
+}

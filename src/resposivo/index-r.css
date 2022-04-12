@@ -1,0 +1,463 @@
+@media (max-width: 768px){
+    header .header{
+        justify-content: space-between;
+    }
+    header .header .icons-nav #menu-mobile{
+        font-size: max(2.5vw, 1.6rem);
+        visibility: visible;
+    }
+    header .header .icons-nav button{
+        display: none;
+    }
+    header .header nav ul{
+        height: 0%;
+        visibility: hidden;
+        transition: height .8s;
+    }
+    header .header nav ul li{
+        text-align: center;
+        width: 100%;
+        padding: 7% 0;
+        margin: 2% 0;
+        background-color: rgb(30, 30, 30);
+    }
+    header .header nav ul.open{
+        visibility: visible;
+        width: 100vw;
+        height: calc(100vh - 80px);
+        position: fixed;
+        top: 80px;
+        left: 0;
+        background-color: rgb(27, 27, 27);
+        z-index: 990;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    header .describe{
+        width: 50%;
+    }
+    header .describe h2{
+        font-size: max(2.5vw, 1.3rem);
+        margin-bottom: 10%;
+    }
+    header .describe > p{
+        font-size: max(1.8vw, 1rem);
+        width: 95%;
+    }
+    header .describe .info-describe{
+        width: 100%;
+    }
+    header .describe .info-describe div p{
+        color: var(--text);
+        font-size: max(1vw, .7rem);
+        text-align: center;
+        margin: 2% 0;
+    }
+    header .describe .info-describe div span{
+        color: rgba(255, 255, 255, 0.5);
+        font-size: max(1vw, .8rem);
+        text-align: center;
+        margin: 2% 0;
+    }
+    header .image {
+        width: 60%;
+        height: 70vw;
+        background-position-x: center;
+        overflow-x: hidden;
+    }
+    header .image img{
+        width: 90%;
+        min-width: 350px;
+    }
+
+}
+@media (max-width: 500px){
+    header {
+        display: flex;
+        flex-flow: column nowrap;
+        position: relative;
+    }
+    header .header{
+        justify-content: space-between;
+    }
+    header .header .icons-nav{
+        width: 70%;
+    }
+    header .header .icons-nav #menu-mobile{
+        font-size: max(2.5vw, 1.6rem);
+        visibility: visible;
+    }
+    header .header .icons-nav button{
+        display: none;
+    }
+    header .header nav ul{
+        height: 0%;
+        display: none;
+        transition: height .8s;
+    }
+    header .header nav ul li{
+        text-align: center;
+        width: 100%;
+        padding: 7% 0;
+        margin: 2% 0;
+        background-color: rgb(30, 30, 30);
+    }
+    header .header nav ul.open{
+        visibility: visible;
+        width: 100vw;
+        height: calc(100vh - 80px);
+        position: fixed;
+        top: 80px;
+        left: 0;
+        background-color: rgb(27, 27, 27);
+        z-index: 990;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header .describe{
+        position: absolute;
+        top: 15% ;
+        left: 0;
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    header .describe .title{
+        width: 80%;
+        height: 100%;
+    }
+    header .describe .title h2{
+        margin-bottom: 5%;
+    }
+    header .describe .title p{
+        font-size: max(1.2vw , .9rem);
+        line-height: max(1vw , 1rem);
+        width: 90%;
+    }
+    header .describe .info{
+        width: 100%;
+        display: flex;
+    }
+    header .describe .info-describe{
+        width: 60%;
+        justify-content: space-around;
+        margin: 0%;
+    }
+    header .describe .info-describe div i{
+        font-size: max(1.6vw , 1rem);
+    }
+    header .describe .info-describe div p{
+        font-size: max(.8vw , .4rem);
+        margin: 4% 0;
+    }
+    header .describe .info-describe div span{
+        font-size: max(.9vw , .5rem);
+    }
+    header .describe .friends-facebook{
+        margin-top: 1%;
+        width: 40%;
+        height: 100%;
+
+    }
+    header .describe .friends-facebook .icon-facebook{
+        padding-left: 5%;
+        display: flex;
+        align-items: flex-start;
+    }
+    header .describe .friends-facebook .icon-facebook i{
+        font-size: max(6vw , 1rem);
+    }
+    header .describe .friends-facebook .friends{
+    }
+    header .describe .friends-facebook .friends h3{
+        font-size: max(.8vw , .3rem);
+    }
+    header .describe .friends-facebook .friends span{
+       font-size: max(.8vw , .3rem);
+       left: -25%;
+   }
+    header .describe .friends-facebook .friends img{
+        border-radius: 50%;
+        border: none;
+        width: 15%;
+    }
+    header .describe .friends-facebook .friends img:nth-of-type(2){
+        position: relative;
+        left: -12%;
+     }
+     header .describe .friends-facebook .friends img:nth-of-type(3){
+        position: relative;
+        left: -22%;
+     }
+    header .image {
+        bottom: 10%;
+        left: 0;
+        width: 100%;
+        min-width: 0px;
+        height: 50%;
+        justify-content: center;
+    }
+
+    header .image img{
+        width: 80%;
+        object-fit: contain;
+        min-width: 0px;
+        opacity: .8;
+        margin-bottom: 0%;
+    }
+    /* FIM HEADER */
+  /* -- */
+/* CARDAPIO */
+
+.cardapio > main .tips{
+    width: 85%;
+    height: 70%;
+    min-width: 50px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background);
+}
+.cardapio > main .tips #info{
+    width: 100%;
+    height: 70%;
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.cardapio > main .tips #info p:first-of-type{
+    color: var(--text);
+    width: 70%;
+    font-size: max(1.2vw, .7rem);
+
+}
+.cardapio > main .tips #info p:last-of-type{
+    width: 95%;
+    color: var(--text);
+}
+.cardapio > main .tips #info button{
+    width: 70%;
+    color: var(--text);
+    font-size: max(4vw, 1rem);
+    font-weight: bold;
+    background-color: var(--darkYellow);
+}
+
+.cardapio > main .tips #info-img{
+    width: 100%;
+    height: 30%;
+}
+.cardapio > main .tips #info-img img{
+    width: 30%;
+}
+    .cardapio{
+        height: auto;
+        margin-bottom: 10%;
+    }
+    .cardapio > main .tabs{
+        width: 100%;
+        height: 120%;
+    }
+    .cardapio > main .tabs .tab-links{
+        width: 100%;
+        height: 10%;
+        min-height: 100px;
+        margin-bottom: 4%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .cardapio > main .tabs .tab-links button{
+        width: 22%;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: max(1vw , .6rem);
+        cursor: pointer;
+        
+        color: var(--text);
+        background-color: #27272770;
+        border: none;
+    
+        padding: 3% 2%;
+        margin: 1% 1%;
+    
+        position: relative;
+        transition: color .4s;
+    }
+    .cardapio > main .tabs .tab-content{
+        width: 93%;
+        height: 90%;
+        overflow: hidden;
+        overflow-y: auto;
+        margin: 0 auto;
+    }
+    /* TABELA DE PREÇOS */
+    section table{
+        width: 100%;
+    }
+    section table tr{
+        width: 100%;
+        height: 60px;
+    }
+    section table tr:nth-child(2n){
+        background-color: #27272790;
+    }
+    section > p{
+        font-size: max(0.5vw , .6rem);
+        margin: 5% auto;
+        width: 70%;
+        text-align: center;
+    }
+    section table td{
+        font-size: max(1.4vw, .7rem);
+    }
+    section table td:not(td:first-child){
+        min-width:50px;
+        text-align: center;
+    }
+    section table td h3{
+        font-size: max(1.3vw, .7rem);
+    }
+    section table td p{
+        color: rgba(255, 255, 255, 0.7);
+        font-size: max(1vw, .6rem);
+        width: 100%;
+
+    }
+    section table td > button{
+        color: var(--darkYellow);
+        border-radius: 10px;
+        outline: none;
+        font-size: max(4vw , 1rem);
+        transition: transform .3s ;
+        cursor: pointer;
+        width: 35px;
+        height: 40px;
+    }
+    section .add-batata{
+        left: 5%;
+        width: 90%;
+        height: 70%; 
+    }
+    section .add-batata span{
+        padding: 5px;
+    }
+    section .add-yakisoba{
+        left: 5%;
+        width: 90%;
+        height: 70%;
+    }
+    section .add-yakisoba span{
+        padding: 5px;
+    }
+    /*box change*/
+    .cardapio .change{
+        width: 80%;
+        height: 30%;
+    }
+    .cardapio .change h2{
+        font-size: max(2vw , .8rem);
+    }
+    
+    /* CONTENT OPDER - BOX PEDIDO */
+    .cardapio .content-order{
+        width: 100%;
+        top: 90px;
+        left: 0%;
+        transform: translate(0%, -20%) scale(1);
+    }
+    .cardapio .show{
+        transform: translate(30%, -50%) scale(.1);
+        opacity: 1;
+        visibility: visible;
+    }
+    .cardapio .show2{
+        transform: translate(0%, 0%) scale(1);
+        opacity: 1;
+        visibility: visible;
+    }
+    .cardapio .box-order{
+        width: 95%;
+        height: 70%;
+    }
+    .cardapio .box-order .table-order tbody td{
+        font-size: max(1.5vw ,.8rem);
+        font-weight: 600;
+    }
+    .cardapio .box-order .table-order tbody td i{
+        font-size: max(2vw ,1.2rem);
+    }
+    .cardapio .btn-box{
+        width: 90%;
+        font-size: max(70% , .7rem);
+    }
+
+    /* COMBOS */
+    .combos{
+        height: auto;
+    }
+    .combos h2{
+        font-size: max(2.6vw, 1.3rem);
+    }
+
+    .combos .content{
+        width: 100%;
+        height: 90%;
+        justify-content: center;
+        margin-top: 0%;
+    }
+    .combos .content div{
+        width: 80%;
+        height: auto;
+        min-height: 230px;
+        max-height: 400px;
+        padding: 2%;
+        margin: 2%;
+    }
+    /* CONTATO */
+
+    .contato {
+        height: auto;
+        margin-top: 10%;
+
+    }
+    .contato .info-contact{
+        width: 100%;
+        height: 30%;
+    }
+    /*logo contact*/
+    .contato .logo-contact{
+        width: 100%;
+        height: 30%;
+    }
+    .contato .logo-contact h3{
+        width: 90%;
+        line-height: 1.5rem;
+    }
+    .contato .logo-contact img{
+        width: 40%;
+    }
+
+    /*developer*/
+
+    .contato .info-developer{
+        margin-top: 4%;
+    }
+    .contato .info-developer .rede-sociais {
+        width: 100%;
+        height: 40%;
+        align-items: center;
+        font-size: max(6vw, 2.5rem);
+    }
+
+}
